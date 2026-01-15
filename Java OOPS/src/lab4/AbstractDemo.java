@@ -21,7 +21,6 @@ abstract class Student {
 
 class Kiitian extends Student {
 
-    @Override
     public void course() {
         System.out.println("Course - B.Tech. (Computer Science & Engg)");
     }
@@ -32,8 +31,6 @@ class Kiitian extends Student {
         course();
     }
 }
-
-
 public class AbstractDemo {
     public static void main(String[] args) {
 
