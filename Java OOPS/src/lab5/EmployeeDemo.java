@@ -4,38 +4,31 @@ import java.util.Scanner;
 interface Employee {
     void getDetails();
 }
-
 interface Manager extends Employee {
     void getDeptDetails();
 }
-
 class Head implements Manager {
 
     int empId;
     String empName;
     int deptId;
     String deptName;
-
     Scanner sc = new Scanner(System.in);
-
     public void getDetails() {
         System.out.print("Enter employee id - ");
         empId = sc.nextInt();
-        sc.nextLine(); // consume newline
-
+        sc.nextLine(); 
         System.out.print("Enter employee name - ");
         empName = sc.nextLine();
     }
-
     public void getDeptDetails() {
         System.out.print("Enter department id - ");
         deptId = sc.nextInt();
-        sc.nextLine(); // consume newline
+        sc.nextLine();
 
         System.out.print("Enter department name - ");
         deptName = sc.nextLine();
     }
-
     void display() {
         System.out.println("\nEmployee id - " + empId);
         System.out.println("Employee name - " + empName);
@@ -43,7 +36,6 @@ class Head implements Manager {
         System.out.println("Department name - " + deptName);
     }
 }
-
 public class EmployeeDemo {
     public static void main(String[] args) {
 
