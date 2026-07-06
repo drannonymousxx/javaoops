@@ -1,0 +1,43 @@
+package oopj improvement;
+
+class CheckArgumentException extends Exception {
+
+    CheckArgumentException(String msg) {
+        super(msg);
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+
+            if(args.length < 4) {
+
+                throw new CheckArgumentException(
+                        "Less than 4 arguments");
+            }
+
+            int sum = 0;
+
+            for(int i = 0; i < 4; i++) {
+
+                int num =
+                    Integer.parseInt(args[i]);
+
+                sum += num * num;
+            }
+
+            System.out.println(
+                    "Sum = " + sum);
+        }
+
+        catch(CheckArgumentException e) {
+
+            System.out.println(
+                    "Exception occurred - "
+                    + e);
+        }
+    }
+}
